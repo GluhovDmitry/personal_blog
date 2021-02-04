@@ -1,14 +1,28 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
     <title>Title</title>
 </head>
 <body>
+<header>
+    <nav class="container">
+      <a class="logo" href="/">Personal blog</a>
+      <div class="nav-toggle"><span></span></div>
+      <form action="" method="get" id="searchform">
+        <input type="text" placeholder="Искать на сайте...">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+      <ul id="menu">
+        <li><a href="">Об авторе</a></li>
+      </ul>
+    </nav>
+</header>
 <div class="conatiner">
     <div id="sidebar">
         <ul>
-            <li><a href="/">Главная</a></li>
             <li><a href="{% url 'chess' %}">Шахматы для общего развития</a></li>
             <li><a href="{% url 'news' %}">Новости</a></li>
             <li><a href="{% url 'lib' %}">Библиотека</a></li>
