@@ -13,3 +13,5 @@ def media(request):
         return render(request, 'media.html', {})
 def guest(request):
         return render(request, 'guest.html', {})
+def post_detail(request):
+        return render(request, 'post.html', {})
