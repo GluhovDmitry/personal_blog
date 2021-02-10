@@ -21,10 +21,14 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('chess/', views.chess, name='chess'),
-    path('chess/<int:pk>/', views.post_detail, name='post_detail'),
+    path('chess/<int:pk>/', views.chess_post_detail, name='chess_post_detail'),
     path('news/', views.news, name='news'),
+    path('news/<int:pk>/', views.news_post_detail, name='news_post_detail'),
     path('lib/', views.lib, name='lib'),
+    path('lib/<int:pk>/', views.lib_post_detail, name='lib_post_detail'),
     path('media/', views.media, name='media'),
+    path('media/<int:pk>/', views.media_post_detail, name='media_post_detail'),
     path('guest/', views.guest, name='guest'),
+    path('guest/<int:pk>/', views.guest_post_detail, name='guest_post_detail,'),
 ]
 

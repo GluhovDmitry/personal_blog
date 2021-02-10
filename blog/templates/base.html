@@ -9,7 +9,7 @@
 <body>
 <header>
     <nav class="container">
-      <a class="logo" href="/">Personal blog</a>
+      <a class="logo" href="/">Развитие</a>
       <form action="" method="get" id="searchform">
         <input type="text" placeholder="Искать на сайте...">
         <button type="submit"><i class="fa fa-search"></i></button>
@@ -19,7 +19,7 @@
       </ul>
     </nav>
 </header>
-<div class="conatiner">
+<div id="main">
     <div id="sidebar">
         <ul>
             <li><a href="{% url 'chess' %}">Шахматы для общего развития</a></li>
@@ -28,6 +28,10 @@
             <li><a href="{% url 'media' %}">Медиатека</a></li>
             <li><a href="{% url 'guest' %}">Гостевая книга</a></li>
         </ul>
+    </div>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
     </div>
 </div>
 

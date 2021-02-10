@@ -5,14 +5,26 @@ body, html {
     font-family: helvetica;
     font-weight: 100;
 }
-.container {
+#main {
     position: relative;
     height: 100%;
     width: 100%;
 }
+#content {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    left: 30%;
+    background: white;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #f7f7f7;
+}
 #sidebar {
     position: absolute;
     background: #f0f0f0;
+    top: 0;
+    left: 0;
     width: 240px;
     height: 100%;
     box-sizing: border-box;
@@ -35,9 +47,9 @@ body, html {
     display: block;
 
 }
-.home {
 
-}
+
+
 .active {
     background: white;
     border-style: solid;
@@ -90,7 +102,7 @@ header:after, .container:after, footer:after, .widget-posts-list li:after, #subs
 .container {
    margin: 0 auto;
    width: 100%;
-   max-width: 960px;
+   max-width: 1960px;
    padding: 0 15px;
 }
 
