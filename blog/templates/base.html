@@ -9,6 +9,7 @@
 <body>
 <header>
     <nav class="container">
+      <button class="bar" onclick="openCloseBar()">&#9776</button>
       <a class="logo" href="/">Развитие</a>
       <form action="" method="get" id="searchform">
         <input type="text" placeholder="Искать на сайте...">
@@ -34,13 +35,20 @@
         {% endblock %}
     </div>
 </div>
-
+<footer></footer>
 <script>
     document.querySelectorAll('#sidebar a').forEach((link) => {
         if (link.pathname === location.pathname) {
             link.classList.add('active')
         }
     });
+    function openCloseBar() {
+        if (document.getElementById("sidebar").style.width === "0px") {
+            document.getElementById("sidebar").style.width = "240px";
+        } else {
+            document.getElementById("sidebar").style.width = "0px";
+        }
+    }
 </script>
 
 </body>

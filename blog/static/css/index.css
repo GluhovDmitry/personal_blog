@@ -1,7 +1,7 @@
 body, html {
     height: 100%;
     margin: 0;
-    overflow:hidden;
+
     font-family: helvetica;
     font-weight: 100;
 }
@@ -12,23 +12,36 @@ body, html {
 }
 #content {
     position: absolute;
-    top: 0;
+    top: 80px;
     right: 10%;
     left: 30%;
+    height: auto;
+}
+#post {
     background: white;
     border-style: solid;
     border-radius: 10px;
     border-color: #f7f7f7;
 }
+#post a {
+    color: #373737;
+    text-decoration: none;
+}
+.list {
+    margin-top: 10px;
+    color: #373737;
+    text-decoration: none;
+}
 #sidebar {
-    position: absolute;
-    background: #f0f0f0;
-    top: 0;
+    position: fixed;
+    background: #f2f2f2;
+    top: 80px;
     left: 0;
     width: 240px;
-    height: 100%;
+    height: auto;
     box-sizing: border-box;
    -moz-box-sizing: border-box;
+   overflow: hidden;
 }
 #sidebar ul {
     margin: 0;
@@ -54,13 +67,13 @@ body, html {
     background: white;
     border-style: solid;
     border-radius: 15px;
-    border-color: #f0f0f0;
+    border-color: #f2f2f2;
 }
 #sidebar ul li:hover a {
     background: #c9c9c9;
     border-style: solid;
     border-radius: 15px;
-    border-color: #f0f0f0;
+    border-color: #f2f2f2;
 }
 
 
@@ -90,7 +103,7 @@ body {
    font-size: 14px;
    line-height: 1;
    color: #373737;
-   background: #f7f7f7;
+   background: #f2f2f2;
 }
 /* добавим очистку потока для всех контейнеров, внутри которых задано обтекание дочерних элементов */
 header:after, .container:after, footer:after, .widget-posts-list li:after, #subscribe:after {
@@ -107,17 +120,32 @@ header:after, .container:after, footer:after, .widget-posts-list li:after, #subs
 }
 
 header {
+   z-index: 99999;
+   position: fixed;
+   top: 0;
    width: 100%;
    background: #ffe8ef;
    box-shadow: 3px 3px 1px rgba(0, 0, 0, .05);
    padding: 15px 0;
    margin-bottom: 30px;
-   position: relative;
+
 }
+
+.bar {
+   position: fixed;
+   top: 28px;
+   float: left;
+   color: #111;
+   letter-spacing: 1px;
+   border: 0;
+   outline: none;
+   background: #ffe8ef;
+}
+
 /* логотип */
 .logo {
-   display: block;
-   float: left;
+   position: fixed;
+   left: 40px;
    color: #111;
    text-transform: uppercase;
    letter-spacing: 1px;
@@ -128,6 +156,7 @@ header {
 
 /* меню */
 #menu {
+
    float: right;
 }
 #menu li {
@@ -148,6 +177,8 @@ header {
 }
 /* форма поиска */
 #searchform {
+   color: #ffe8ef;
+
    float: right;
    margin-left: 46px;
    display: inline-block;
@@ -161,7 +192,7 @@ header {
    height: 40px;
    overflow: hidden;
    outline: none;
-   color: #ffe8ef;
+   background-color: #ffe8ef;
    font-style: italic;
 }
 #searchform button {
@@ -170,7 +201,7 @@ header {
    border: none;
    position: absolute;
    right: 10px;
-   color: #ffe8ef;
+
    cursor: pointer;
    font-size: 18px;
 }
