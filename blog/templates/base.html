@@ -7,6 +7,7 @@
     <title>Title</title>
 </head>
 <body>
+
 <header>
     <nav class="container">
       <button class="bar" onclick="openCloseBar()">&#9776</button>
@@ -20,6 +21,7 @@
       </ul>
     </nav>
 </header>
+
 <div id="main">
     <div id="sidebar">
         <ul>
@@ -37,16 +39,23 @@
 </div>
 <footer></footer>
 <script>
+
     document.querySelectorAll('#sidebar a').forEach((link) => {
         if (link.pathname === location.pathname) {
             link.classList.add('active')
         }
     });
+
     function openCloseBar() {
         if (document.getElementById("sidebar").style.width === "0px") {
             document.getElementById("sidebar").style.width = "240px";
+            document.getElementById("content").style.left = "240px";
+            if (window.innerWidth <= 680) {
+                document.getElementById("content").style.left = "10px";
+            }
         } else {
             document.getElementById("sidebar").style.width = "0px";
+            document.getElementById("content").style.left = "10px";
         }
     }
 </script>
