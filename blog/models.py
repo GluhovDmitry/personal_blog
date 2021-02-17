@@ -1,9 +1,11 @@
 from django.db import models
+from tinymce.models import HTMLField
 
 class Chess_post(models.Model):
     title = models.CharField(max_length=255)
     datetime = models.DateTimeField(u'Дата публикции')
-    content = models.TextField(max_length=100000)
+    #content = models.TextField(max_length=100000)
+    content = HTMLField()
 
 class News_post(models.Model):
     title = models.CharField(max_length=255)
@@ -13,7 +15,8 @@ class News_post(models.Model):
 class Lib_post(models.Model):
     title = models.CharField(max_length=255)
     datetime = models.DateTimeField(u'Дата публикции')
-    content = models.TextField(max_length=100000)
+    #content = models.TextField(max_length=100000)
+    content = HTMLField()
 
 class Media_post(models.Model):
     title = models.CharField(max_length=255)

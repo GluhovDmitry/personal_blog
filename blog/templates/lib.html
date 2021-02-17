@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
-{% block title %} Библиотека {% endblock %}
+{% block head %} <title>Библиотека</title> {% endblock %}
 {% block content %}
 
 <div class="post">
     {% for obj in posts %}
     <h1><a href="{% url 'lib_post_detail' pk=obj.pk %}">{{ obj.title }}</a></h1>
-    <h1>{{ obj.content|truncatechars:1000 }}</h1>
+    <h1>{{ obj.content|truncatechars:1000|safe }}</h1>
     {% empty %}
 	<h1>Пусто!</h1>
     {% endfor %}

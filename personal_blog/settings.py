@@ -24,7 +24,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '8*i&rj#7m-@5l^s&e28!#aa(n*tad9ft^o2-0j7)%rbxcthaah'
-
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'tinymce',
 ]
 
 MIDDLEWARE = [

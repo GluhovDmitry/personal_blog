@@ -1,11 +1,12 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'css/index.css' %}" />
-    <title>Title</title>
-</head>
+    {% block head %}
+    <title>Развитие</title>
+    {% endblock %}
 <body>
 
 <header>
