@@ -32,5 +32,5 @@ urlpatterns = [
     path('media/<int:pk>/', views.media_post_detail, name='media_post_detail'),
     path('guest/', views.guest, name='guest'),
     path('guest/<int:pk>/', views.guest_post_detail, name='guest_post_detail,'),
-] #+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
